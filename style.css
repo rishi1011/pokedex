@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #32dbc6, #ebefd0) no-repeat;
+}
+
+form{
+    width: 80%;
+    text-align: center;
+}
+
+.search {
+    width: 100%;
+    max-width: 1000px;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    border: 1px solid #aaa;
+    background: transparent;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.search:focus{
+    outline: 0;
+}
+
+.container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    position: relative;
+    background-color: #fb743a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    margin: 10px;
+}
+
+.error {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: inherit;
+    color: inherit;
+    filter: brightness(80%) opacity(0.8);
+    border-radius: 50%;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+    filter: brightness(130%) opacity(0.5);
+    border-top-left-radius: 8px;
+}
+
+.img-container{
+    height: 140px;
+    width: 80%;
+    margin: 30px auto 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+}
+
+.card:hover > .img-container{
+    transform: scale(1.3);
+}
+
+.info{
+    /* margin-top: 15px; */
+    text-align: center;
+}
+
+h3, span {
+    margin: 5px;
+}
+
+span{
+    padding: 4px 8px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    display: inline-block;
+}
+
